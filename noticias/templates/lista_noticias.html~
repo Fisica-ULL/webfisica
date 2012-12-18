@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang=’es’>
+    <head>
+        <title>Noticias</title>
+        <meta charset=’utf-8’>
+    </head>
+
+    <body>
+        <center><h1>Noticias</h1></center>
+    {% for elemento in lista %}
+    <ul>
+        <h3>
+        <strong>{{elemento.titulo}}</strong> 
+        <div align='right''>Por: {{elemento:usuario}}. {{elemento.fecha}}</div>
+        </h3>
+    <li>{{elemento.texto}}</li>
+    </ul>
+    <br>
+    {% endfor %}
+    </body>
+</html>
