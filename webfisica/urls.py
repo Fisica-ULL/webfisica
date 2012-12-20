@@ -15,4 +15,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'noticias.views.lista_noticias'),
+    url(r'^noticia/(?P<id_noticia>\d+)$', 'noticias.views.noticia_completa'),
+    url(r'^noticia/comentarioform/$', 'noticias.views.nuevo_comentario'),
+    url(r'^noticiaform/$', 'noticias.views.nueva_noticia'),
 )

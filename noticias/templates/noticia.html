@@ -1,0 +1,22 @@
+{% block titulo %} Noticias {% endblock %}
+
+{% block encabezado %}
+    <h1>{{noticia.titulo|title}}</h1>
+{% endblock %}
+
+{% block contenido %}
+
+    <div id='texto'>
+        <p>{{noticia.texto}}</p>
+    </div>
+    <div id='comentarios'>
+        <h2> Comentarios </h2>
+            <a href='/noticia/comentarioform'> Agregar un comentario </a>
+            {% for item in comentarios %}
+                <p>{{item.texto}}</p>
+            {% empty %}
+                <p> No hay comentarios. </p>
+            {% endfor %}
+    </div>
+
+{% endblock %}

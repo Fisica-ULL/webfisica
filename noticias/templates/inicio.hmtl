@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block titulo %} Inicio {% endblock %}
+
+{% block style_css %}
+{% endblock %} 
+
+{% block encabezado %}
+    <h1> Noticias </h1>
+{% endblock %}

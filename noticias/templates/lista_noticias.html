@@ -10,10 +10,10 @@
     {% for elemento in lista %}
     <ul>
         <h3>
-        <strong>{{elemento.titulo}}</strong> 
+        <strong><a href=noticia/{{elemento.id}}>{{elemento.titulo}}<a></strong> 
         <div align='right''>Por: {{elemento.usuario}}. {{elemento.fecha}}</div>
         </h3>
-    <li>{{elemento.texto}}</li>
+    {% comment %}<li>{{elemento.texto}}</li> {% endcomment %}
     </ul>
     <br>
     {% endfor %}
